@@ -20,7 +20,7 @@ app.use(bodyparser.urlencoded({ extended: false }));
 
 
 //getting the user data for the API
-let subscription_key = '660d110da5e245dabb96f5cef26a91eb';
+let subscription_key = process.env.SUBSCRIPTION_KEY;
 let credentials = new CognitiveServicesCredentials(subscription_key);
 let endpoint = process.env.ENDPOINT_URL;
 if(credentials === '' || credentials === undefined){
